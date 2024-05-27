@@ -1496,7 +1496,7 @@ insert into job values
 ('clean', 0.5);
 select * from job;
 ```
-![query](screeny/query.png)
+![query76](screeny/query76.png)
 
 ### 77. Adding Checks
 ```bash
@@ -1788,6 +1788,7 @@ select
 from descendent;
 ```
 ![exercise32](screeny/exercise32.png)
+
 The result from union is the same because there are no duplicates in the table
 
 ### 87. Contact Tracing Database
