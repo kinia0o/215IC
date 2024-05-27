@@ -1070,13 +1070,13 @@ SELECT *
 FROM penguins
 WHERE body_mass_g > 4000;
 ```
-![exrcise23p1](screeny/exrcise23p1.png)
+![exercise23p1](screeny/exercise23p1.png)
 ```bash
 SELECT *
 FROM penguins
 WHERE species = 'Adelie' AND body_mass_g > 4000;
 ```
-![exrcise23p2](screeny/exrcise23p2.png)
+![exercise23p2](screeny/exercise23p2.png)
 ```bash
 EXPLAIN QUERY PLAN
 SELECT *
@@ -1087,14 +1087,14 @@ SELECT *
 FROM penguins
 WHERE body_mass_g > 4000;
 ```
-![exrcise23p3](screeny/exrcise23p3.png)
+![exercise23p3](screeny/exercise23p3.png)
 ```bash
 EXPLAIN QUERY PLAN
 SELECT *
 FROM penguins
 WHERE species = 'Adelie' AND body_mass_g > 4000;
 ```
-![exrcise23p4](screeny/exrcise23p4.png)
+![exercise23p4](screeny/exercise23p4.png)
 
 Using 'WHERE' seems more efficient because it is faster and less complicated.
 
@@ -1295,6 +1295,7 @@ WHERE staff.dept IS NULL
 ORDER BY department.name;
 ```
 In my opinion, this query is easier to understand for less advanced users.
+
 ![exercise26](screeny/exercise26.png)
 
 
@@ -1880,5 +1881,6 @@ group by name
 order by label, name;
 ```
 ![exercise33](screeny/exercise33.png)
+
 I added a stopping condition at depth level 5
 
