@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: python_app
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=debug
+      - DB_HOST=db
+      - DB_NAME=mydb
+      - DB_USER=user
+      - DB_PASS=password
+    depends_on:
+      - db
+    networks:
+      - my_network
+
+  db:
+    image: postgres:15-alpine
+    container_name: database
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - my_network
+
+networks:
+  my_network:
+
+volumes:
+  db_data:
